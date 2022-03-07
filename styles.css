@@ -1,0 +1,459 @@
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-color: #5722CD;
+    --blue-color: #4845E4;
+    --pink-color: #ED4385;
+    --standardtext-color: #0C0C0C;
+    --floating-words-color: #F2F0FF;
+    --bg-projects-color: #F3F6F9;
+    --service-tile-color: #7A7A7A;
+}
+
+.header-gradient {
+    background: #4b49e8;
+    background: -webkit-linear-gradient(90deg, #4b49e8 0%, #5722cd 100%);
+    background: linear-gradient(90deg, #4b49e8 0%, #5722cd 100%);
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", sans-serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*border-color: orange;*/
+    /*border-style: solid;*/
+}
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------- */
+nav {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 0;
+    font-weight: bold;
+
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 20px 60px 20px 0;
+    gap: 40px;
+
+
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #F2F0FF;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 40px 0 60px 0;
+
+
+}
+
+.header-text {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 300px;
+    border-style: solid;
+    gap: 20px;
+    position: relative;
+    height: auto;
+    width: 60vw;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+}
+
+.header-text h1 {
+    font-size: 3rem;
+}
+
+.header-text h2 {
+    font-weight: normal;
+}
+
+header button {
+    background-color: var(--pink-color);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#squiggle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    bottom: -10px;
+    z-index: 4;
+
+}
+
+.line-header-bottom {
+    border-top: 30px solid transparent;
+    border-left: 100vw solid white;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+
+
+}
+
+
+/* --------------- 4.2 Introduction ------------- */
+
+.intro {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+}
+
+.intro #intro-text {
+    display: flex;
+    flex-direction: column;
+    /*border-style: solid;*/
+    align-items: center;
+    align-content: center;
+    flex-basis: 1000px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    color: #5722CD;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+
+}
+
+.intro p {
+
+    padding-top: 30px;
+}
+
+.intro a {
+    color: var(--purple-color);
+}
+
+.line-intro-bottom {
+    border-bottom: 30px solid transparent;
+    border-right: 100vw solid white;
+    position: absolute;
+    bottom: -30px;
+    display: block;
+    z-index: 3;
+}
+
+#Hello :before {
+    content: "Hello";
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 1000px;
+    top: 0;
+    font-size: 12rem;
+    left: calc(50% - 500px);
+    z-index: 1;
+    border-style: solid;
+    text-align: center;
+
+
+}
+
+
+/* --------------- 4.3 work ------------- */
+.work {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: var(--bg-projects-color);
+    padding: 60px 0 40px 0;
+    position: relative;
+    gap: 20px;
+}
+
+.work > article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 10px;
+    font-weight: bold;
+
+
+}
+
+.rolling-stone-text, .variety-text, .worth-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 300px;
+
+}
+
+.work button {
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    background-color: var(--bg-projects-color);
+    color: var(--purple-color);
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+
+
+}
+
+
+.work-images {
+
+    width: 60%;
+    box-shadow: 3px 5px 8px 9px rgba(0, 0, 0, 0.1);
+}
+
+.line-work-bottom {
+    display: flex;
+    border-bottom: 30px solid transparent;
+    border-right: 100vw solid var(--bg-projects-color);
+    position: relative;
+    bottom: -70px;
+    z-index: 4;
+}
+
+.view-project-line {
+    cursor: pointer;
+}
+
+.view-project-line:after {
+    content: "";
+    display: inline-block;
+    margin-left: 1em;
+    margin-bottom: 4px;
+    width: 2em;
+    height: 2px;
+    background-color: var(--purple-color);
+    transition: width .35s ease-in-out;
+}
+
+.view-project-line:hover::after {
+    width: 4em;
+    margin-bottom: 4px;
+    display: inline-block;
+
+}
+
+
+/* --------------- 4.4 Services ------------- */
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 80px 0 80px 0;
+    width: 100%;
+    position: relative;
+}
+
+.services article {
+    border-style: solid;
+    border-color: #5722CD;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 450px;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px 9px rgba(0, 0, 0, 0.06);
+}
+
+.services article h3 {
+    color: #5722CD;
+}
+
+.services-images {
+    width: 30%;
+}
+
+
+/* --------------- 4.5 Form ------------- */
+
+
+.line-services-bottom {
+    border-bottom: 30px solid transparent;
+    border-right: 100vw solid white;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+}
+
+.form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #4b49e8;
+    background: -webkit-linear-gradient(90deg, #4b49e8 0%, #5722cd 100%);
+    background: linear-gradient(90deg, #4b49e8 0%, #5722cd 100%);
+    padding: 80px 0 40px 0;
+    color: #F2F0FF;
+    text-align: center;
+}
+
+.form h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.the-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    color: #F2F0FF;
+    font-size: 1rem;
+    flex-basis: 500px;
+    gap: 10px;
+
+}
+
+.the-form input {
+    width: 100%;
+    height: 3em;
+}
+
+#form-button {
+    background-color: var(--pink-color);
+    border: none;
+    color: white;
+    padding: 15px 64px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-top: 2rem;
+    cursor: pointer;
+
+
+}
+
+/* --------------- 4.6 footer------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: #0C0C0C;
+    color: #F2F0FF;
+}
+
+/* --------------- 4.7 media queries------------- */
+
+@media screen and (max-width: 768px) {
+    nav {
+
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+
+
+    }
+
+    .header {
+        flex-shrink: 1;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+
+    #rolling-Stone, #worth {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+
+    }
+
+    #variety {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .work-images {
+        flex-shrink: 1;
+        width: 100%;
+    }
+}
+
